@@ -1,4 +1,4 @@
-package kluckow.org.springerproblem.controller;
+package kluckow.org.springerproblem.handler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,22 +6,30 @@ import java.util.List;
 import kluckow.org.springerproblem.view.components.Knight;
 import kluckow.org.springerproblem.view.components.Position;
 
+/**
+ * The Class MovementHandler.
+ *
+ * @param <T> the generic type
+ */
 public class MovementHandler<T> {
 
+	/** The chess piece. */
 	private T chessPiece;
 
+	/**
+	 * Instantiates a new movement handler.
+	 *
+	 * @param chessPiece the chess piece
+	 */
 	public MovementHandler(T chessPiece) {
 		this.setChessPiece(chessPiece);
 	}
 
-	public T getChessPiece() {
-		return this.chessPiece;
-	}
-
-	public void setChessPiece(T chessPiece) {
-		this.chessPiece = chessPiece;
-	}
-
+	/**
+	 * Gets the possible target positions.
+	 *
+	 * @return the possible target positions
+	 */
 	public List<Position> getPossibleTargetPositions() {
 
 		List<Position> possiblePositions = new ArrayList<>();
@@ -38,6 +46,13 @@ public class MovementHandler<T> {
 		return possiblePositions;
 	}
 
+	/**
+	 * Apply.
+	 *
+	 * @param position the position
+	 * @param moveset the moveset
+	 * @return the position
+	 */
 	private Position apply(Position position, int[] moveset) {
 
 		int newX = position.getX() + moveset[0];
@@ -46,6 +61,13 @@ public class MovementHandler<T> {
 		return new Position(newX, newY);
 	}
 
+	/**
+	 * Validate.
+	 *
+	 * @param position the position
+	 * @param moveset the moveset
+	 * @return true, if successful
+	 */
 	private boolean validate(Position position, int[] moveset) {
 
 		int newX = position.getX() + moveset[0];
@@ -54,6 +76,24 @@ public class MovementHandler<T> {
 		boolean isValidY = newY >= 0 && newY <= 7;
 
 		return isValidX && isValidY;
+	}
+
+	/**
+	 * Gets the chess piece.
+	 *
+	 * @return the chess piece
+	 */
+	public T getChessPiece() {
+		return this.chessPiece;
+	}
+
+	/**
+	 * Sets the chess piece.
+	 *
+	 * @param chessPiece the new chess piece
+	 */
+	public void setChessPiece(T chessPiece) {
+		this.chessPiece = chessPiece;
 	}
 
 }

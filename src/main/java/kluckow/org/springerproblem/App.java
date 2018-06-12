@@ -9,12 +9,23 @@ import javafx.stage.Stage;
 import kluckow.org.springerproblem.view.components.Chessboard;
 import kluckow.org.springerproblem.view.components.Toolbar;
 
+/**
+ * The Class App.
+ */
 public class App extends Application {
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		Application.launch(args);
 	}
 
+	/* (non-Javadoc)
+	 * @see javafx.application.Application#start(javafx.stage.Stage)
+	 */
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 

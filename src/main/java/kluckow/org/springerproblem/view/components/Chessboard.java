@@ -6,15 +6,29 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import kluckow.org.springerproblem.theme.Theme;
 
+/**
+ * The Class Chessboard.
+ *
+ * @param <T> the generic type
+ */
 public class Chessboard<T> extends GridPane implements Theme {
 
+	/** The Constant SIZE_CHESSBOARD. */
 	private static final int SIZE_CHESSBOARD = 8;
+
+	/** The fields. */
 	private Field[][] fields = new Field[SIZE_CHESSBOARD][SIZE_CHESSBOARD];
 
+	/**
+	 * Instantiates a new chessboard.
+	 */
 	public Chessboard() {
 		this.setupUI();
 	}
 
+	/**
+	 * Setup UI.
+	 */
 	private void setupUI() {
 
 		this.setAlignment(Pos.BASELINE_CENTER);
@@ -30,19 +44,38 @@ public class Chessboard<T> extends GridPane implements Theme {
 		}
 	}
 
+	/**
+	 * Toggle color.
+	 *
+	 * @param color the color
+	 * @return the color
+	 */
 	private Color toggleColor(Color color) {
 
 		return COLOR_BLACK == color ? COLOR_WHITE : COLOR_BLACK;
 	}
 
+	/**
+	 * Gets the fields.
+	 *
+	 * @return the fields
+	 */
 	public Field[][] getFields() {
 		return this.fields;
 	}
 
+	/**
+	 * Sets the fields.
+	 *
+	 * @param fields the new fields
+	 */
 	public void setFields(Field[][] fields) {
 		this.fields = fields;
 	}
 
+	/**
+	 * Clear.
+	 */
 	public void clear() {
 
 		// iterate over fields
@@ -60,6 +93,12 @@ public class Chessboard<T> extends GridPane implements Theme {
 		}
 	}
 
+	/**
+	 * Clear.
+	 *
+	 * @param <T> the generic type
+	 * @param exception the exception
+	 */
 	public <T> void clear(T exception) {
 
 		// iterate over fields
