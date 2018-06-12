@@ -1,4 +1,4 @@
-package kluckow.org.springerproblem.view;
+package kluckow.org.springerproblem.view.nodes;
 
 import javafx.geometry.Insets;
 import javafx.scene.layout.GridPane;
@@ -7,13 +7,15 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import kluckow.org.springerproblem.theme.Theme;
 
-public class Field extends StackPane implements Theme {
+public class Field<T> extends StackPane implements Theme {
 
 	private static final int FIELD_SIZE = 70;
 	public static final Insets PADDING = new Insets(5);
 	private int row;
 	private int col;
 	private Color color;
+	private T chessPiece;
+
 
 	public Field(Chessboard parent, int row, int col, Color color) {
 
@@ -51,6 +53,14 @@ public class Field extends StackPane implements Theme {
 
 	public void setColor(Color color) {
 		this.color = color;
+	}
+
+	public T getChessPiece() {
+		return this.chessPiece;
+	}
+
+	public void setChessPiece(T chessPiece) {
+		this.chessPiece = chessPiece;
 	}
 
 }
