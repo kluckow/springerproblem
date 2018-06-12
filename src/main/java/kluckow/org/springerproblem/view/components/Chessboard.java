@@ -1,4 +1,4 @@
-package kluckow.org.springerproblem.view.nodes;
+package kluckow.org.springerproblem.view.components;
 
 import javafx.geometry.Pos;
 import javafx.scene.image.ImageView;

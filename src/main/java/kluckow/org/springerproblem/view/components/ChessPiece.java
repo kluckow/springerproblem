@@ -1,4 +1,4 @@
-package kluckow.org.springerproblem.view.nodes;
+package kluckow.org.springerproblem.view.components;
 
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;

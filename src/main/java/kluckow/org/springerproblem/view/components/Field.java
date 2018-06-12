@@ -1,4 +1,4 @@
-package kluckow.org.springerproblem.view.nodes;
+package kluckow.org.springerproblem.view.components;
 
 import javafx.geometry.Insets;
 import javafx.scene.layout.GridPane;

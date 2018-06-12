@@ -3,8 +3,8 @@ package kluckow.org.springerproblem.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import kluckow.org.springerproblem.view.nodes.Knight;
-import kluckow.org.springerproblem.view.nodes.Position;
+import kluckow.org.springerproblem.view.components.Knight;
+import kluckow.org.springerproblem.view.components.Position;
 
 public class MovementHandler<T> {
 

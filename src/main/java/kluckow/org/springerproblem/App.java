@@ -6,8 +6,8 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import kluckow.org.springerproblem.view.nodes.Chessboard;
-import kluckow.org.springerproblem.view.nodes.Toolbar;
+import kluckow.org.springerproblem.view.components.Chessboard;
+import kluckow.org.springerproblem.view.components.Toolbar;
 
 public class App extends Application {
 

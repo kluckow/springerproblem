@@ -1,4 +1,4 @@
-package kluckow.org.springerproblem.view.nodes;
+package kluckow.org.springerproblem.view.components;
 
 public class Position {
 
