@@ -85,7 +85,6 @@ public class Chessboard<T> extends GridPane {
 				field.getChildren().forEach(e -> {
 					// since imageview exists once an image has been placed, do additional null check on image
 					if (e instanceof ImageView && ((ImageView) e).getImage() != null) {
-						System.out.println("Found a field with ImageView, it is now cleared!");
 						((ImageView) e).setImage(null);
 					}
 				});
@@ -107,9 +106,8 @@ public class Chessboard<T> extends GridPane {
 				Field<?> field = this.fields[col][row];
 				field.getChildren().forEach(e -> {
 					// since imageview exists once an image has been placed, do additional null check on image
-					// additionally exclude exception peice
+					// additionally exclude exception piece
 					if (e instanceof ImageView && ((ImageView) e).getImage() != null && (ChessPiece) e != exception) {
-						System.out.println("Found a field with ImageView, it is now cleared!");
 						((ImageView) e).setImage(null);
 					}
 				});

@@ -15,4 +15,10 @@ public class Theme {
 		/** The Constant COLOR_BLACK. */
 		public static final Color COLOR_BLACK = Color.LIGHTSALMON;
 	}
+
+	public interface ChessPiece {
+
+		/** The Constant COLOR_DEFAULT. */
+		public static final Color COLOR_DEFAULT = Theme.Field.COLOR_BLACK;
+	}
 }

@@ -22,7 +22,7 @@ public class Knight extends ChessPiece {
 	 * Instantiates a new knight.
 	 */
 	public Knight() {
-		this.setColor(COLOR_DEFAULT);
+		this.setColor(Theme.ChessPiece.COLOR_DEFAULT);
 		this.setImage(new Image(FILENAME_PREFIX + "_" + COLOR_STR_DEFAULT + "." + IMG_EXTENSION_CHESSPIECE));
 	}
 

@@ -213,7 +213,6 @@ public class Toolbar extends HBox {
 		MovementHandler<Knight> movementResolver = new MovementHandler<>(this.knight);
 		List<Position> possiblePositions = movementResolver.getPossibleTargetPositions();
 		for (Position position : possiblePositions) {
-			System.out.println(position.getX() + "|" + position.getY());
 			// create knight with inverted color on each position
 			Knight knight = new Knight(this.knight.getColor());
 			knight.setPosition(position);

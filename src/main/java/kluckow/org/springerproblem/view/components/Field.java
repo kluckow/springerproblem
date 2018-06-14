@@ -40,7 +40,7 @@ public class Field<T> extends StackPane {
 	 * @param col the col
 	 * @param color the color
 	 */
-	public Field(Chessboard parent, int row, int col, Color color) {
+	public Field(Chessboard<?> parent, int row, int col, Color color) {
 
 		// background
 		Rectangle rec = new Rectangle(FIELD_SIZE, FIELD_SIZE);
