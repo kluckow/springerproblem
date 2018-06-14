@@ -33,7 +33,7 @@ public class Knight extends ChessPiece {
 	 */
 	public Knight(Color color) {
 		this.setColor(color);
-		String colorStr = color == Theme.COLOR_BLACK ? "black" : "white";
+		String colorStr = color == Theme.Field.COLOR_BLACK ? "black" : "white";
 		this.setImage(new Image("knight_" + colorStr + ".png"));
 	}
 
@@ -53,7 +53,7 @@ public class Knight extends ChessPiece {
 	 */
 	public void setColor(Color color) {
 		this.color = color;
-		String colorStr = color == Theme.COLOR_BLACK ? "black" : "white";
+		String colorStr = color == Theme.Field.COLOR_BLACK ? "black" : "white";
 		this.setImage(new Image("knight_" + colorStr + ".png"));
 	}
 
@@ -61,8 +61,8 @@ public class Knight extends ChessPiece {
 	 * Invert color.
 	 */
 	public void invertColor() {
-		this.color = this.color == Theme.COLOR_BLACK ? Theme.COLOR_WHITE : Theme.COLOR_BLACK;
-		String colorStr = this.color == Theme.COLOR_BLACK ? "black" : "white";
+		this.color = this.color == Theme.Field.COLOR_BLACK ? Theme.Field.COLOR_WHITE : Theme.Field.COLOR_BLACK;
+		String colorStr = this.color == Theme.Field.COLOR_BLACK ? "black" : "white";
 		this.setImage(new Image("knight_" + colorStr + ".png"));
 	}
 }

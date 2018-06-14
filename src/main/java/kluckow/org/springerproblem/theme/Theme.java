@@ -5,11 +5,14 @@ import javafx.scene.paint.Color;
 /**
  * The Interface Theme.
  */
-public interface Theme {
+public class Theme {
 
-	/** The Constant COLOR_WHITE. */
-	public static final Color COLOR_WHITE = Color.NAVAJOWHITE;
+	public interface Field {
 
-	/** The Constant COLOR_BLACK. */
-	public static final Color COLOR_BLACK = Color.LIGHTSALMON;
+		/** The Constant COLOR_WHITE. */
+		public static final Color COLOR_WHITE = Color.NAVAJOWHITE;
+
+		/** The Constant COLOR_BLACK. */
+		public static final Color COLOR_BLACK = Color.LIGHTSALMON;
+	}
 }

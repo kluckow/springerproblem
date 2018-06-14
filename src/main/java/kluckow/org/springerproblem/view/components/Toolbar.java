@@ -7,7 +7,6 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import kluckow.org.springerproblem.handler.MovementHandler;
-import kluckow.org.springerproblem.theme.Theme;
 
 /**
  * The Class Toolbar.
@@ -79,10 +78,6 @@ public class Toolbar extends HBox {
 		this.btnClear.setMinWidth(100);
 		this.btnClear.setDisable(true);
 		this.btnClear.setOnAction(event -> {
-			if (this.knight == null) {
-				System.out.println("Not clearing anything, because board is already empty!");
-				return;
-			}
 			this.board.clear();
 			this.disablePlacementBtns();
 		});
@@ -115,7 +110,6 @@ public class Toolbar extends HBox {
 			this.knight.setPosition(newPosition);
 			Field<?> rndField = this.board.getFields()[x][y];
 			rndField.getChildren().addAll(this.knight);
-			System.out.println("Setting knight on a random position: (" + x + "|" + y + ")");
 			this.displayPossibleTargetPositions();
 		});
 	}
@@ -180,7 +174,7 @@ public class Toolbar extends HBox {
 			this.board.clear();
 			Position knightPos = new Position(0, 0);
 			Field<?> startField = this.board.getFields()[knightPos.getX()][knightPos.getY()];
-			this.knight = new Knight(Theme.COLOR_WHITE);
+			this.knight = new Knight();
 			this.knight.setPosition(knightPos);
 			startField.getChildren().addAll(this.knight);
 			this.displayPossibleTargetPositions();

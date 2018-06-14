@@ -5,14 +5,13 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import kluckow.org.springerproblem.theme.Theme;
 
 /**
  * The Class Field.
  *
  * @param <T> the generic type
  */
-public class Field<T> extends StackPane implements Theme {
+public class Field<T> extends StackPane {
 
 	/** The Constant FIELD_SIZE. */
 	private static final int FIELD_SIZE = 70;

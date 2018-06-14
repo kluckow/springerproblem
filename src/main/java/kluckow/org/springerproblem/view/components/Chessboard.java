@@ -11,7 +11,7 @@ import kluckow.org.springerproblem.theme.Theme;
  *
  * @param <T> the generic type
  */
-public class Chessboard<T> extends GridPane implements Theme {
+public class Chessboard<T> extends GridPane {
 
 	/** The Constant SIZE_CHESSBOARD. */
 	private static final int SIZE_CHESSBOARD = 8;
@@ -33,7 +33,7 @@ public class Chessboard<T> extends GridPane implements Theme {
 
 		this.setAlignment(Pos.BASELINE_CENTER);
 
-		Color color = COLOR_WHITE;
+		Color color = Theme.Field.COLOR_WHITE;
 		for (int row = 0; row < 8; row++) {
 			for (int col = 0; col < 8; col++) {
 				Field<Knight> field = new Field<>(this, row, col, color);
@@ -52,7 +52,7 @@ public class Chessboard<T> extends GridPane implements Theme {
 	 */
 	private Color toggleColor(Color color) {
 
-		return COLOR_BLACK == color ? COLOR_WHITE : COLOR_BLACK;
+		return Theme.Field.COLOR_BLACK == color ? Theme.Field.COLOR_WHITE : Theme.Field.COLOR_BLACK;
 	}
 
 	/**

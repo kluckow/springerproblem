@@ -16,7 +16,7 @@ abstract class ChessPiece extends ImageView {
 	protected static final String IMG_EXTENSION_CHESSPIECE = "png";
 
 	/** The Constant COLOR_DEFAULT. */
-	protected static final Color COLOR_DEFAULT = Theme.COLOR_BLACK;
+	protected static final Color COLOR_DEFAULT = Theme.Field.COLOR_BLACK;
 
 	/**
 	 * Clear image.
